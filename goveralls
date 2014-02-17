@@ -1,0 +1,8 @@
+go get
+go build
+go get github.com/bmizerany/assert
+go test -v
+
+go get -v github.com/axw/gocov/gocov
+go get -v github.com/mattn/goveralls
+goveralls -v -service drone.io $COVERALLS_TOKEN
